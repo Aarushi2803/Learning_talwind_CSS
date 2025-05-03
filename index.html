@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDekstop.com</title>
+<!-- linking talwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- linking FA-icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head> 
+
+<body>
+
+<!-- navbar -->
+<nav class="text-black bg-white flex justify-between items-center p-2"> 
+    <a href="#" id="brand" class="flex gap-2 items-center ">
+        <img src="images/nav1.png" alt="" class="object-cover max-w-12 max-h-12">
+        <span class="text-lg font-medium ">ToDekstop</span>
+    </a>
+        <div id="navmenu" class="hidden lg:flex gap-12 "> 
+            <a href="#" class="font-medium hover:text-blue-600">Pricing</a>
+            <a href="#" class="font-medium hover:text-blue-600">Docs</a> 
+            <a href="#" class="font-medium hover:text-blue-600">Changelog</a> 
+            <a href="#" class="font-medium hover:text-blue-600">Blogs</a> 
+            <a href="#" class="font-medium hover:text-blue-600">Login</a>
+        </div>
+ 
+    <button class="font-medium hidden md:flex gap-3 border rounded-lg border-gray-400 px-2 hover:border-gray-800"> 
+        <img src="images/nav3.png" alt="electrons" >  
+        <span class="p-1">Electron Developers</span> 
+        <i class="fa fa-arrow-right p-2"></i> 
+    </button>
+
+    <button class="p-2 md:hidden" onclick="handleMenu()">
+        <i class="fa fa-bars"></i> 
+    </button>
+ 
+<!-- dropdown -->
+    <div id="nav-dialog" class="hidden z-10 fixed md:hidden inset-0 bg-white p-3"> 
+        <div id="nav-bar" class="flex justify-between">
+            <a href="#" id="brand" class="flex gap-2 items-center ">
+                <img src="images/nav1.png" alt="" class="object-cover max-w-12 max-h-12">
+                <span class="text-lg font-medium ">ToDekstop</span>
+            </a>
+
+            <button class="p-2 md:hidden" onclick="handleMenu()">
+                <i class="fa fa-times text-gray-600"></i> 
+            </button>
+        </div>
+
+        <!--items  -->
+    <div>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-300 block rounded-lg">Pricing</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-300 block rounded-lg">Docs</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-300 block rounded-lg">Changelog</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-300 block rounded-lg">Blogs</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-300 block rounded-lg">Login</a>
+    </div>
+
+<!-- electron buttons -->
+    <div >
+        <div class="border-1 border-gray-200"></div>
+        <button class="font-medium w-full flex m-2 p-3 hover:bg-gray-200"> 
+            <img src="images/nav3.png" alt="electrons" >  
+            <span class="p-1">Electron Developers</span> 
+            <i class="fa fa-arrow-right p-2"></i> 
+        </button>  
+    </div>
+    </div>
+</nav>
+
+</body>
+
+<!-- javascript -->
+<script src="scripts.js"></script>
+</html>
