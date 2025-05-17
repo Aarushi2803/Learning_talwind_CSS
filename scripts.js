@@ -68,8 +68,10 @@ dtElements.forEach(element =>{
   element.addEventListener('click',() =>{
     const ddId = element.getAttribute('aria-controls');
     const ddElement = document.getElementById(ddId);
-    const ddArrowIcon = ddElement.querySelectorAll('i');
+    const ddArrowIcon = element.querySelector('i');
+
     ddElement.classList.toggle('hidden');
-    ddArrowIcon.classList.toggle(-rotate-180);
+    ddArrowIcon.classList.toggle('-rotate-180');
   })
 })
+
