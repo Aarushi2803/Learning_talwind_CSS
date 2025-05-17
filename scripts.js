@@ -50,13 +50,26 @@ function setupSectionObserver(element, isLTR, speed) {
 const line1 = document.getElementById('line1');
 const line2 = document.getElementById('line2');
 const line3 = document.getElementById('line3');
+const line4 = document.getElementById('line4');
 
 // Setup observers and store cleanup functions
 const cleanupFunctions = [
     setupSectionObserver(line1, true, 0.15),
     setupSectionObserver(line2, false, 0.15),
-    setupSectionObserver(line3, true, 0.15)
+    setupSectionObserver(line3, true, 0.15),
+    setupSectionObserver(line4,true,0.8)
 ];
 
 // If you need to clean up later (e.g., in a SPA when changing views)
 // cleanupFunctions.forEach(cleanup => cleanup());
+
+const dtElements = document.querySelectorAll('dt');
+dtElements.forEach(element =>{
+  element.addEventListener('click',() =>{
+    const ddId = element.getAttribute('aria-controls');
+    const ddElement = document.getElementById(ddId);
+    const ddArrowIcon = ddElement.querySelectorAll('i');
+    ddElement.classList.toggle('hidden');
+    ddArrowIcon.classList.toggle(-rotate-180);
+  })
+})
